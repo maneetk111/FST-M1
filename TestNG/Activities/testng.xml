@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ExampleSuite"  parallel="classes">
+    <test name="Test" >
+        <groups>
+            <run>
+                <include name="HeaderTests" />
+            </run>
+        </groups>
+        <classes>
+            <class name="TestNG.DemoOne"/>
+            <class name="TestNG.DemoTwo"/>
+            <class name="TestNG.Activity5"/>
+			<class name="TestNG.Activity1"/>
+			<class name="TestNG.Activity2"/>
+			<class name="TestNG.Activity3"/>
+        </classes>
+    </test>
+    <test name="Parameter test cases">
+        <parameter name="username" value="admin"/>
+        <parameter name="password" value="password"/>
+        <classes>
+            <class name="TestNG.Activity6"/>
+        </classes>
+    </test>
+    <test name="data-provider test cases">
+        <classes>
+            <class name="TestNG.Activity7"/>
+        </classes>
+    </test>
+    <test name="Alert test cases">
+        <classes>
+            <class name="TestNG.Activity9"/>
+        </classes>
+    </test>
+    <test name="Action test cases">
+        <classes>
+            <class name="TestNG.Activity10"/>
+        </classes>
+    </test>
+</suite>
